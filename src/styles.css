@@ -1,1 +1,439 @@
-/* You can add global styles to this file, and also import other style files */
+.main-header {
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+/* Barra Superior */
+.top-bar {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Barra Media */
+.middle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+}
+
+.search-container {
+  display: flex;
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 0 40px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-right: none;
+}
+
+.search-btn {
+  background-color: #0088cc;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+/* Carrito */
+.cart {
+  display: flex;
+  border: 1px solid #0088cc;
+}
+
+.cart-icon {
+  background-color: #0088cc;
+  color: white;
+  padding: 10px;
+}
+
+.cart-count {
+  padding: 10px 15px;
+  color: #0088cc;
+}
+
+/* Barra de Navegación Azul */
+.nav-bar {
+  background-color: #0088cc;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar li {
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.shipping-promo {
+  margin-left: auto;
+  font-weight: normal;
+}
+.main-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px 20px 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+/* Newsletter Styles */
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter-form input {
+  background: #000;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.newsletter-form button {
+  background: #0088cc;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', sans-serif; /* Tipografía pesada similar a la imagen */
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* BANNER PRINCIPAL */
+.main-banner {
+    flex: 3; /* Toma el 75% del ancho */
+    background: white;
+    border: 1px solid #ddd;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+}
+
+.main-banner h1 {
+    font-size: 3.5rem;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+}
+
+.specialist {
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+.categories {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+/* BANNERS LATERALES */
+.side-banners {
+    flex: 1; /* Toma el 25% del ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-status {
+    background: #0096db;
+    color: white;
+    align-self: flex-end;
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+
+.banner-item {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.green { background-color: #00a19a; }
+.blue {
+    background-color: #0081c5;
+    flex-direction: row;
+    text-align: left;
+}
+.orange { background-color: #ff6a00; }
+
+/* BOTÓN FLOTANTE */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0096db;
+    color: white;
+    border: 4px solid #f8b319;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVE: Si la pantalla es pequeña, se apilan */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* ===== Imagenes: normalización y ajustes globales ===== */
+/* Evitar que las imágenes se vean gigantes, mantener proporción y no desbordar */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Logo del header: limitar tamaño razonable */
+.logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Limitar cualquier imagen dentro de la barra media para que no crezca demasiado en alto */
+.middle-bar img {
+  max-height: 80px;
+  height: auto;
+}
+
+/* Iconos de banners laterales */
+.banner-item .icon {
+  width: 56px;
+  height: auto;
+}
+.banner-item .icon-mail {
+  width: 64px;
+  height: auto;
+}
+
+/* Ajustes responsivos adicionales para móviles */
+@media (max-width: 768px) {
+  .logo img { max-width: 140px; }
+  .middle-bar img { max-height: 60px; }
+  .banner-item .icon,
+  .banner-item .icon-mail { width: 48px; }
+}
+.site-footer {
+    background-color: #222526; /* Gris muy oscuro casi negro */
+    color: #ffffff;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+    gap: 30px;
+}
+
+.footer-column h3, .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Línea decorativa debajo de los títulos */
+.footer-column h4::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #666;
+    margin-top: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+/* Estilos específicos de Contacto */
+.contact-info .phone {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-info address, .contact-info .schedule {
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Newsletter y Formulario */
+.newsletter .terms-check {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: #bbb;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.newsletter-form {
+    display: flex;
+    height: 40px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background: #000;
+    border: none;
+    padding: 0 10px;
+    color: white;
+}
+
+.newsletter-form button {
+    background: #0081c5;
+    border: none;
+    color: white;
+    width: 45px;
+    cursor: pointer;
+}
+
+/* Responsivo para tablets y móviles */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-column h4::after {
+        margin: 10px auto;
+    }
+    .newsletter .terms-check {
+        text-align: left;
+    }
+}

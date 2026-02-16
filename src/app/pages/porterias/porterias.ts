@@ -6,8 +6,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-porterias',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './porterias.html', // He quitado ".component" porque en tu carpeta no lo tiene
-  styleUrls: ['../../app.css']         // Como no veo un porterias.css, te sugiero usar el global o crear uno
+  templateUrl: './porterias.html' // He quitado ".component" porque en tu carpeta no lo tiene
 })
 export class PorteriasComponent {
   titulo = 'Porterías de Fútbol';

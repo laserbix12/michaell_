@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tenis de Mesa</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
+        .container { display: flex; max-width: 1200px; margin: auto; gap: 20px; }
+
+        /* Sidebar / Filtros */
+        .sidebar { width: 250px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); height: fit-content; }
+        .sidebar h3 { margin-top: 0; border-bottom: 2px solid #e03d3d; padding-bottom: 10px; }
+        .filter-section p { font-weight: bold; margin: 15px 0 5px; }
+        .filter-section label { display: block; margin-bottom: 5px; cursor: pointer; font-size: 0.9rem; }
+        .slider { width: 100%; margin-top: 10px; }
+
+        /* Contenido de Productos */
+        .products { flex: 1; }
+        .grid-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+
+        /* Grid de Productos */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .product-card { background: white; border-radius: 10px; padding: 15px; position: relative; transition: transform 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .product-card:hover { transform: translateY(-5px); }
+
+        /* Imágenes */
+        .main-img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; }
+
+        /* Badges */
+        .offer-badge { position: absolute; top: 10px; left: 10px; background: #e03d3d; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: bold; border-radius: 3px; z-index: 1; }
+        .new-badge { position: absolute; top: 10px; left: 10px; background: #2ecc71; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: bold; border-radius: 3px; z-index: 1; }
+
+        /* Detalles de texto */
+        .brand { color: #888; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+        .title { font-weight: bold; margin: 5px 0; height: 40px; overflow: hidden; font-size: 0.95rem; }
+        .stars { color: #f1c40f; margin-bottom: 10px; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; }
+        .price { font-size: 1.2rem; font-weight: bold; color: #333; }
+        .old-price { text-decoration: line-through; color: #999; font-size: 0.9rem; margin-left: 5px; }
+
+        .add-btn { background: #333; color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; }
+        .add-btn:hover { background: #e03d3d; }
+    </style>
+</head>
+<body>
+
 <div class="container">
   <aside class="sidebar">
     <h3>FILTRAR</h3>
@@ -10,6 +57,7 @@
       <label><input type="checkbox"> Butterfly</label>
       <label><input type="checkbox"> Cornilleau</label>
       <label><input type="checkbox"> Joola</label>
+      <label><input type="checkbox"> Tibhar</label>
 
       <p>Rango de Precio</p>
       <div class="price-range">15€ - 1.500€</div>
@@ -19,15 +67,16 @@
 
   <section class="products">
     <nav style="margin-bottom: 10px; font-size: 0.8rem; color: #666;">
-      <a routerLink="/">Inicio</a> / Equipamiento / <strong>Mesas</strong>
+      Inicio / Equipamiento / <strong>Mesas y Accesorios</strong>
     </nav>
     <h1>Equipamiento Profesional</h1>
 
     <div class="grid-controls">
-      <span>Mostrando 5 de 23 resultados</span>
-      <select style="padding: 5px; border-radius: 5px;">
+      <span>Mostrando 6 de 24 resultados</span>
+      <select style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
         <option>Ordenar por: Menor Precio</option>
         <option>Más vendidos</option>
+        <option>Novedades</option>
       </select>
     </div>
 
@@ -35,61 +84,72 @@
 
       <div class="product-card">
         <div class="offer-badge">¡Oferta! -20%</div>
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=60" alt="Mesa" class="main-img">
+        <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=800&auto=format&fit=crop" alt="Mesa Interior" class="main-img">
         <div class="brand">CORNILLEAU</div>
-        <p class="title">Mesa de Ping Pong Interior Advance 300</p>
-        <div class="stars">★★★★☆</div>
+        <p class="title">Mesa de Competición ITTF 740 Wood</p>
+        <div class="stars">★★★★★</div>
         <div class="price-row">
           <div>
-            <span class="price">499,00 €</span>
-            <span class="old-price">625,00 €</span>
+            <span class="price">1.249,00 €</span>
+            <span class="old-price">1.500 €</span>
           </div>
           <button class="add-btn">+</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="offer-badge">Top Ventas</div>
-        <img src="https://images.unsplash.com/photo-1592928305944-8d2b1d6e7a16?auto=format&fit=crop&w=800&q=60" alt="Pala" class="main-img">
+        <div class="new-badge">Top Ventas</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxnf9XYVjCGdHx6PWlg133_bodErwEqkhMA&s" alt="Pala Profesional" class="main-img">
         <div class="brand">BUTTERFLY</div>
-        <p class="title">Pala Profesional Timo Boll Gold Edition</p>
+        <p class="title">Pala Carbono Zhang Jike ZLC</p>
         <div class="stars">★★★★★</div>
         <div class="price-row">
-          <span class="price">85,00 €</span>
+          <span class="price">225,00 €</span>
           <button class="add-btn">+</button>
         </div>
       </div>
 
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1582719478201-8f0b4d9e4c77?auto=format&fit=crop&w=800&q=60" alt="Pelotas" class="main-img">
+        <img src="https://cdn5.coppel.com/mkp/8221128-1.jpg" alt="Pelotas ITTF" class="main-img">
         <div class="brand">BUTTERFLY</div>
-        <p class="title">Pelotas 3 Estrellas ITTF G40+ (12 uds)</p>
+        <p class="title">Pelotas 3 Estrellas A40+ (Caja 12)</p>
         <div class="stars">★★★★★</div>
         <div class="price-row">
-          <span class="price">19,95 €</span>
+          <span class="price">22,50 €</span>
           <button class="add-btn">+</button>
         </div>
       </div>
 
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1567908541001-3e4bc9f6b0c1?auto=format&fit=crop&w=800&q=60" alt="Red" class="main-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJSMGFz-RtB8I3FQ4_b4udrUhGEGPB2s923g&s" alt="Mesa Exterior" class="main-img">
         <div class="brand">JOOLA</div>
-        <p class="title">Red Profesional de Competición Ajustable</p>
+        <p class="title">Mesa Exterior JOOLA Outdoor J200</p>
         <div class="stars">★★★★☆</div>
         <div class="price-row">
-          <span class="price">42,00 €</span>
+          <span class="price">599,00 €</span>
           <button class="add-btn">+</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="offer-badge">Nuevo</div>
-        <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8f89?auto=format&fit=crop&w=800&q=60" alt="Mesa Exterior" class="main-img">
-        <div class="brand">CORNILLEAU</div>
-        <p class="title">Mesa Exterior Pro 500 Resistente al Clima</p>
+        <div class="new-badge">Nuevo</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQJ0hdteJ522ETuIDZUkog1gKVwthjZXIliw&s" alt="Red Ping Pong" class="main-img">
+        <div class="brand">TIBHAR</div>
+        <p class="title">Red Smash Profesional Ajustable</p>
+        <div class="stars">★★★★☆</div>
+        <div class="price-row">
+          <span class="price">45,00 €</span>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1511067007398-7e4b90cfa4bc?q=80&w=800&auto=format&fit=crop" alt="Zapatillas Ping Pong" class="main-img">
+        <div class="brand">ASICS</div>
+        <p class="title">Zapatillas Attack Dominate FF 2</p>
         <div class="stars">★★★★★</div>
         <div class="price-row">
-          <span class="price">850,00 €</span>
+          <span class="price">110,00 €</span>
           <button class="add-btn">+</button>
         </div>
       </div>
@@ -97,3 +157,6 @@
     </div>
   </section>
 </div>
+
+</body>
+</html>

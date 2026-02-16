@@ -1,12 +1,10 @@
 import { Routes } from '@angular/router';
-import { Header } from './components/header/header';
-import { Footer } from './pages/footer/footer';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home',
+    redirectTo: 'pingpong',
   },
   {
     path: 'home',

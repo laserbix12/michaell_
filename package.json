@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:prod": "ng build --configuration production",
-    "deploy": "ng build --configuration production --base-href=/tienda-pingpong/ && npx angular-cli-ghpages --dir=dist/baloncesto/browser"
+    "deploy": "ng build --configuration production --base-href=/venta_motos/ && npx angular-cli-ghpages --dir=dist/motos3/browser"
   },
   "prettier": {
     "printWidth": 100,

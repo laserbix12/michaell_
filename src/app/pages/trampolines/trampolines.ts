@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './trampolines.html',
-  styleUrls: []
+  styleUrls: ['./trampolines.css']
 })
 export class TrampolinesComponent {}

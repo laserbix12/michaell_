@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './multijuegos.html',
-  styleUrls: []
+  styleUrls: ['./multijuegos.css']
 })
 export class MultijuegosComponent {}

@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './billares.html',
-  styleUrls: []
+  styleUrls: ['./billares.css']
 })
 export class BillaresComponent {}

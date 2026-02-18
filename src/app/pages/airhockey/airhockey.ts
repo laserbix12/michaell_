@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './airhockey.html',
-  styleUrls: []
+  styleUrls: ['./airhockey.css']
 })
 export class AirHockeyComponent {}
